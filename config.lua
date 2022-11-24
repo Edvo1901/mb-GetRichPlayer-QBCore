@@ -1,6 +1,6 @@
 Config = {}
 
-Config.WebHook = "https://discord.com/api/webhooks/1045421739519254598/FSHp89juM7ZT6xDUd9x46dezTxpEe_9DQdhKIchGyuA_2BjMI8eBtuQ80PyPSSG3Mel3"
+Config.WebHook = ""
 Config.SendLogWithLicense = false
 Config.AvatarURL = ""
 Config.ServerName = ""
