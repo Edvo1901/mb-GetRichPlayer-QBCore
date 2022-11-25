@@ -22,3 +22,7 @@ Depend on version you want (short, standard or full version). You need to change
 
 # Support
 > Join our discord for support: [DISCORD](https://discord.gg/MkXfmb2M2V)
+
+# A few word
+This is the script that I make for my server need, so it might not fit your. You can adapt it as you want or if you any improvement, just open a PR or send me a text on discord.
+I do hope you enjoy the script and it will help you have a better management
