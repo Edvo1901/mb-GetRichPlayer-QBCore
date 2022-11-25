@@ -5,7 +5,7 @@ Config = {}
 ----------------------
 
 --Webhook of your channel (tutorial: https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
-Config.WebHook = ""
+Config.WebHook = "https://discord.com/api/webhooks/1045490029721567315/dIhr_884nsNvRyKxSsNQ3tOyQNeA6KcVVE5eX8mrJEJL1uKpBab7NzoVxAVJTHTghMor"
 
 --What information do you want the log to include? (Refer to README.md for more information)
 Config.LogMessageType = "short" --Only choose 1: "standard", "short" or "full"

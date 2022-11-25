@@ -48,7 +48,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getTopPlayerMoney", function(type)
         end
 
         sendToDiscord(resultWithLicense) --Send log to discord
-    elseif (type == "short") then
+    elseif (type == "standard") then
         local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, `citizenid`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC LIMIT ?", {Config.OnlyTopRichest.top})
         local resultWithoutLicense = ''
 
@@ -58,7 +58,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getTopPlayerMoney", function(type)
 
         sendToDiscord(resultWithoutLicense) --Send log to discord
     else
-        local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC LIMIT ?", {Config.OnlyTopRichest.top})
+        local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, `citizenid`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC LIMIT ?", {Config.OnlyTopRichest.top})
         local shortMsg = ''
 
         for _, v in pairs(topRichestPlayers) do
@@ -80,7 +80,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getAllPlayerMoney", function(type)
         end
 
         sendToDiscord(resultWithLicense) --Send log to discord
-    elseif (type == "short") then
+    elseif (type == "standard") then
         local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, `citizenid`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC")
         local resultWithoutLicense = ''
 
@@ -90,7 +90,7 @@ RegisterNetEvent("mb-GetRichPlayer:server:getAllPlayerMoney", function(type)
 
         sendToDiscord(resultWithoutLicense) --Send log to discord
     else
-        local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC")
+        local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, `citizenid`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC")
         local shortMsg = ''
 
         for _, v in pairs(topRichestPlayers) do
