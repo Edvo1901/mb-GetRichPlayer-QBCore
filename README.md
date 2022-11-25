@@ -2,7 +2,10 @@
 A QBCore script that allow you to keep track of top richest player in your server by sending logs to discord
 
 # Preview
-https://media.discordapp.net/attachments/1026901903503798342/1045514652987174962/image.png
+
+[Short version](https://media.discordapp.net/attachments/1026901903503798342/1045514652987174962/image.png)
+[Standard version](https://media.discordapp.net/attachments/1026901903503798342/1045514653553410088/image.png)
+[Full version](https://media.discordapp.net/attachments/1026901903503798342/1045514653997998201/image.png)
 
 # Setup
 1. Download the file
