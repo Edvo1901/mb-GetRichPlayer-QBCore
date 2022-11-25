@@ -7,11 +7,11 @@ Config = {}
 --Webhook of your channel (tutorial: https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
 Config.WebHook = ""
 
---Do you want the log message include the player license?
-Config.SendLogWithLicense = false
+--What information do you want the log to include? (Refer to README.md for more information)
+Config.LogMessageType = "short" --Only choose 1: "standard", "short" or "full"
 
 --Avater for your log (optional)
-Config.AvatarURL = ""
+Config.AvatarURL = "https://media.discordapp.net/attachments/1037224938005872661/1037225027453599744/Guess_project.png"
 
 --Name for your log (optional)
 Config.ServerName = "MAYBE CHECKLOG"
@@ -25,7 +25,7 @@ Config.LogColour = 65352
 --Do you want the log to be automatically sent after a certain time?
 --By the default, you need to use an admin command to trigger event
 Config.SendLogByTime = {
-    enable = false, --Enable/disable this feature
+    enable = true, --Enable/disable this feature
     time = 60, --How long do you want the log to be sent (default: 60 minutes)
 }
 
