@@ -16,5 +16,9 @@ A QBCore script that allow you to keep track of top richest player in your serve
 4. Go to your server.cfg and add this line
 `ensure mb-GetRichPlayer`
 
+# Adjust config
+Depend on version you want (short, standard or full version). You need to change the config to fit the version
+```Config.LogMessageType = "short" --Only choose 1: "standard", "short" or "full"```
+
 # Support
 > Join our discord for support: [DISCORD](https://discord.gg/MkXfmb2M2V)
