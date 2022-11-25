@@ -41,12 +41,20 @@ end, 'admin')
 RegisterNetEvent("mb-GetRichPlayer:server:getTopPlayerMoney", function(license)
     if (license) then
         local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, `citizenid`, `license`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC LIMIT ?", {Config.OnlyTopRichest.top})
-        local resultWithLicense = Lang:t("message.top_with_license", {name = topRichestPlayers[1]["name"], citizenid = topRichestPlayers[1]["citizenid"], license = topRichestPlayers[1]["license"], money = topRichestPlayers[1]["money"], totalMoney = topRichestPlayers[1]["total_money"]})
+        local resultWithLicense = ''
+
+        for _, v in pairs(topRichestPlayers) do
+            resultWithLicense = resultWithLicense .. "`" .. _ .. "." .. Lang:t("message.top_with_license", {name = topRichestPlayers[_]["name"], citizenid = topRichestPlayers[_]["citizenid"], license = topRichestPlayers[_]["license"], money = topRichestPlayers[_]["money"], totalMoney = topRichestPlayers[_]["total_money"]})
+        end
 
         sendToDiscord(resultWithLicense) --Send log to discord
     else
         local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, `citizenid`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC LIMIT ?", {Config.OnlyTopRichest.top})
-        local resultWithoutLicense = Lang:t("message.top_without_license", {name = topRichestPlayers[1]["name"], citizenid = topRichestPlayers[1]["citizenid"], money = topRichestPlayers[1]["money"], totalMoney = topRichestPlayers[1]["total_money"]})
+        local resultWithoutLicense = ''
+
+        for _, v in pairs(topRichestPlayers) do
+            resultWithoutLicense = resultWithoutLicense .. "`" .. _ .. "." .. Lang:t("message.top_without_license", {name = topRichestPlayers[_]["name"], citizenid = topRichestPlayers[_]["citizenid"], money = topRichestPlayers[_]["money"], totalMoney = topRichestPlayers[_]["total_money"]})
+        end
 
         sendToDiscord(resultWithoutLicense) --Send log to discord
     end
@@ -56,12 +64,20 @@ end)
 RegisterNetEvent("mb-GetRichPlayer:server:getAllPlayerMoney", function(license)
     if (license) then
         local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, `citizenid`, `license`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC")
-        local resultWithLicense = Lang:t("message.top_with_license", {name = topRichestPlayers[1]["name"], citizenid = topRichestPlayers[1]["citizenid"], license = topRichestPlayers[1]["license"], money = topRichestPlayers[1]["money"], totalMoney = topRichestPlayers[1]["total_money"]})
+        local resultWithLicense = ''
+
+        for _, v in pairs(topRichestPlayers) do
+            resultWithLicense = resultWithLicense .. "`" .. _ .. "." .. Lang:t("message.top_with_license", {name = topRichestPlayers[_]["name"], citizenid = topRichestPlayers[_]["citizenid"], license = topRichestPlayers[_]["license"], money = topRichestPlayers[_]["money"], totalMoney = topRichestPlayers[_]["total_money"]})
+        end
 
         sendToDiscord(resultWithLicense) --Send log to discord
     else
-        local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, `citizenid`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC LIMIT ?")
-        local resultWithoutLicense = Lang:t("message.top_without_license", {name = topRichestPlayers[1]["name"], citizenid = topRichestPlayers[1]["citizenid"], money = topRichestPlayers[1]["money"], totalMoney = topRichestPlayers[1]["total_money"]})
+        local topRichestPlayers = MySQL.Sync.fetchAll("SELECT `name`, `money`, `citizenid`, JSON_VALUE(money, '$.cash') + JSON_VALUE(money, '$.bank') AS `total_money` FROM `players` GROUP BY `name` ORDER BY `total_money` DESC")
+        local resultWithoutLicense = ''
+
+        for _, v in pairs(topRichestPlayers) do
+            resultWithoutLicense = resultWithoutLicense .. "`" .. _ .. "." .. Lang:t("message.top_without_license", {name = topRichestPlayers[_]["name"], citizenid = topRichestPlayers[_]["citizenid"], money = topRichestPlayers[_]["money"], totalMoney = topRichestPlayers[_]["total_money"]})
+        end
 
         sendToDiscord(resultWithoutLicense) --Send log to discord
     end

@@ -4,8 +4,8 @@ local Translations = {
         help = "Get money of top players",
     },
     message = {
-        top_without_license = "**%{name}** (%{citizenid}) | %{money} | **TOTAL MONEY:** $%{totalMoney}\n",
-        top_with_license = "**%{name}** (%{citizenid}) | %{license} | %{money} | **TOTAL MONEY:** $%{totalMoney}\n",
+        top_without_license = "%{name} (%{citizenid}) | %{money} | TOTAL MONEY: $%{totalMoney}`\n",
+        top_with_license = "%{name} (%{citizenid}) | %{license} | %{money} | TOTAL MONEY: $%{totalMoney}`\n",
     }
 }
 
