@@ -4,6 +4,13 @@ A QBCore script that allow you to keep track of top richest player in your serve
 # Contributor
 > Big thanks to `Jorn#0008` who helped me dealing with the SQL stuff. This script cannot be done without you!
 
+# Support
+> Join our discord for support: [DISCORD](https://discord.gg/MkXfmb2M2V)
+
+# Version
+1. [QBCore version](https://github.com/Edvo1901/mb-GetRichPlayer-QBCore)
+2. [ESX version](https://github.com/Edvo1901/mb-GetRichPlayer-ESX)
+
 # Preview
 
 [Short version](https://media.discordapp.net/attachments/1026901903503798342/1045514652987174962/image.png)
@@ -31,9 +38,6 @@ A QBCore script that allow you to keep track of top richest player in your serve
 # Adjust config
 Depend on version you want (short, standard or full version). You need to change the config to fit the version
 ```Config.LogMessageType = "short" --Only choose 1: "standard", "short" or "full"```
-
-# Support
-> Join our discord for support: [DISCORD](https://discord.gg/MkXfmb2M2V)
 
 # A few word
 This is the script that I make for my server need, so it might not fit your. You can adapt it as you want or if you any improvement, just open a PR or send me a text on discord.
