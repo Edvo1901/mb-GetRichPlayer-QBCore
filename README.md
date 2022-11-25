@@ -4,7 +4,9 @@ A QBCore script that allow you to keep track of top richest player in your serve
 # Preview
 
 [Short version](https://media.discordapp.net/attachments/1026901903503798342/1045514652987174962/image.png)
+
 [Standard version](https://media.discordapp.net/attachments/1026901903503798342/1045514653553410088/image.png)
+
 [Full version](https://media.discordapp.net/attachments/1026901903503798342/1045514653997998201/image.png)
 
 # Setup
