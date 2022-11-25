@@ -1,5 +1,8 @@
 # mb-GetRichPlayer
-A QBCore script that allow you to keep track of top richest player in your server by sending logs to discord
+A QBCore script that allow you to keep track of top richest player in your server by sending logs to discord.
+
+# Contributor
+> Big thanks to `Jorn#0008` who helped me dealing with the SQL stuff. This script cannot be done without you!
 
 # Preview
 
